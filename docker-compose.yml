@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: niqtest
+      MYSQL_DATABASE: niqproduct
+      MYSQL_USER: niqtest
+      MYSQL_PASSWORD: niqtest
+    ports:
+      - "3306:3306"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
